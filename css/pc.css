@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@700&family=Roboto+Mono:wght@300;400&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/background.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.trash {
+    width: 93.9%;
+    height: 100%;
+    margin-top: 5%;
+    margin-left: 6.2%;
+}
+
+.trash .trash_bin {
+    width: 10%;
+}
+
+.trash .trash_bin img {
+    width: 65px;
+    height: 70px;
+    margin-top: 2%;
+    margin-left: 24%;
+    cursor: pointer;
+}
+
+.trash .trash_bin figcaption {
+    display: flex;
+    margin-left: 33%;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+}
+
+.navPc_top {
+    width: 100%;
+    height: 27px;
+    background: rgba(0, 0, 0, 0.582);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navPc_top .left,
+.navPc_top .center,
+.navPc_top .right {
+    color: white;
+}
+
+.navPc_top .left {
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.navPc_top .center {
+    margin-top: 1%;
+}
+
+.right a {
+    color: white;
+}
+
+.navPc_top .right {
+    margin-right: 1%;
+}
+
+.navPc_top .right {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navPc_top .right i {
+    cursor: pointer;
+}
+
+.navPc_left {
+    width: 85px;
+    height: 95.9%;
+    background: rgba(0, 0, 0, 0.479);
+}
+
+.navPc_left .blueWolf,
+.navPc_left .email,
+.navPc_left .terminal {
+    width: 100%;
+    height: 13%;
+    padding-bottom: 5px;
+}
+
+.navPc_left .blueWolf img,
+.navPc_left .email img,
+.navPc_left .terminal img {
+    width: 100%;
+    height: 100%;
+}
+
+/*hover*/
+
+.highlight:hover {
+    background: rgba(255, 255, 255, 0.397);
+}
+
+.navPc_left .blueWolf img:hover,
+.navPc_left .email img:hover,
+.navPc_left .terminal img:hover {
+    background: rgba(255, 255, 255, 0.397);
+}
+
+.navPc_left .blueWolf img.active,
+.navPc_left .email img.active,
+.navPc_left .terminal img.active {
+    background: rgba(255, 255, 255, 0.397);
+}
+
+.emailApp,
+.terminalApp {
+    display: none;
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.emailApp {
+    z-index: 5;
+}
+
+.emailApp .main_bar {
+    width: 100%;
+    height: 40px;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000000, #928dab96, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000000, #928dab96, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.emailApp .main_bar i {
+    font-weight: bold;
+    color: white;
+}
+
+.emailApp .main_bar span i {
+    font-size: 20px;
+    color: rgb(144, 224, 107);
+    cursor: pointer;
+}
+
+.main_screen {
+    width: 100%;
+    height: 92%;
+    border-bottom-left-radius: 6px;
+    display: inline-flex;
+}
+
+.menuEmail {
+    width: 10%;
+    height: 100%;
+    background: rgb(216, 216, 216);
+    border-bottom-left-radius: 6px;
+    border-right: 1px solid #818181;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuEmail i {
+    padding: 26px;
+    border-bottom: 1px solid #818181;
+}
+
+.menuEmail img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.spanTitle {
+    display: none;
+}
+
+.menuEmail:hover {
+    width: 25%;
+}
+
+.menuEmail:hover .spanTitle {
+    display: inline;
+    margin-left: 10px;
+}
+
+.menuEmail .inbox:hover,
+.menuEmail .bookmark:hover,
+.menuEmail .send:hover,
+.menuEmail .envelope:hover,
+.menuEmail .trashMenu:hover {
+    background: black;
+    color: white;
+}
+
+.emailInbox {
+    width: 90%;
+    background-image: url(../img/background_email.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+}
+
+.email_bar {
+    width: 100%;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnPrevious {
+    cursor: pointer;
+    padding-top: 5px;
+    width: 90px;
+}
+
+.highlighter {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.highlighter .trashFill,
+.highlighter .bookmarkEmpty,
+.highlighter .bookmarkFull {
+    width: 14px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.highlighter .bookmarkFull {
+    display: none;
+    color: rgb(109, 109, 19);
+}
+
+.emailInbox .email1_full {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(255, 255, 255, 0.637);
+    border-bottom: 1px solid #818181;
+    overflow: hidden;
+}
+
+.contentMessege {
+    height: 42.7%;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.emailInbox .email1,
+.emailInbox .email2,
+.emailInbox .email3 {
+    width: 100%;
+    height: 58px;
+    background: rgba(255, 255, 255, 0.637);
+    border-bottom: 1px solid #818181;
+    overflow: hidden;
+}
+
+.emailInbox .email1_full p,
+.emailInbox .email1 p,
+.emailInbox .email2 p,
+.emailInbox .email3 p {
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.opc {
+    width: 100%;
+    height: 232px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 140px;
+    padding-top: 10px;
+    margin-bottom: 100px;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
+    background: rgb(197, 197, 197);
+}
+
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label {
+    position: relative;
+    height: 150px;
+    padding: 10px;
+    background: white;
+    border: 2px solid #818181;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.459);
+    cursor: text;
+}
+
+.accordion .contentBx .content {
+    position: relative;
+    background: white;
+    border-radius: 4px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content {
+    height: 150px;
+    padding: 10px;
+}
+
+.accordion .contentBx .content li {
+    margin-bottom: 3px;
+    padding: 8px;
+    list-style-type: none;
+}
+
+.accordion .contentBx .content .opc1:hover,
+.accordion .contentBx .content .opc2:hover {
+    background: rgba(0, 0, 0, 0.192);
+    cursor: pointer;
+}
+
+.to_send {
+    width: 120px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background: rgb(216, 106, 106);
+    cursor: pointer;
+}
+
+.nothingHere {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.637);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminalApp {
+    display: none;
+    border: 5px solid rgb(77, 77, 77);
+}
+
+.terminalApp .terminal_bar {
+    width: 100%;
+    height: 40px;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to top, #6d6d6d, #434343, #6d6d6d); */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to top, #6d6d6d, #434343, #6d6d6d); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.bar_btn {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+.bar_btn .closeTerminal {
+    color: rgb(187, 19, 19);
+    margin-right: 3px;
+}
+
+.bar_btn .closeTerminal,
+.bar_btn .dashCircle {
+    width: 14px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.bar_btn .termianlFullscreen {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 1px;
+}
+
+.bar_btn .termianlFullscreen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.terminal_bar .titleNavTer {
+    color: white;
+    font-size: 20px;
+}
+
+.nothing {
+    color: transparent;
+}
+
+.terminalApp .terminalOpc {
+    width: 100%;
+    height: 91.7%;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    font-family: 'Roboto Mono', sans-serif;
+    background: rgb(77, 27, 27);
+}
+
+.accordionT .contentBxT .labelT {
+    position: relative;
+    height: 500px;
+    padding: 10px;
+    background: white;
+    color: rgba(0, 0, 0, 0.459);
+    cursor: text;
+}
+
+.accordionT .contentBxT .content {
+    position: relative;
+    background: white;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordionT .contentBxT.active .content {
+    height: 150px;
+    padding: 10px;
+}
+
+.accordionT .contentBxT .content li {
+    margin-bottom: 3px;
+    padding: 8px;
+    list-style-type: none;
+}
+
+.accordionT .contentBxT .content .opc1:hover,
+.accordionT .contentBxT .content .opc2:hover {
+    background: rgba(0, 0, 0, 0.192);
+    cursor: pointer;
+}

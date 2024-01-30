@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@700&family=Roboto+Mono:wght@300;400&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+
+.menu {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 30px;
+    padding: 5px 13px;
+    color: white;
+    -webkit-transition: -webkit-transform 1s;
+}
+
+.menu-icon:hover {
+    -webkit-transform: rotate(180deg) translateZ(0);
+}
+
+.menuList {
+    position: fixed;
+    width: 300px;
+    height: 100px;
+    top: 80px;
+    right: 25px;
+    padding: 15px 0;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: white;
+}
+
+.menuNone {
+    display: none;
+}
+
+.menuBlock {
+    display: block;
+}
+
+.menuList ul li {
+    list-style-type: none;
+    font-weight: bolder;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+.scan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scan .fingerprint {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: url(../img/key_1.png);
+    background-size: 300px;
+}
+
+.scan .fingerprint::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/key_2.png);
+    background-size: 300px;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+}
+
+.scan .fingerprint::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #00FFFF;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #00FFFF) drop-shadow(0 0 60px #00FFFF);
+    animation: animate_line 4s ease-in-out infinite;
+}
+
+@keyframes animate_line {
+
+    0%,
+    100% {
+        top: 0%;
+    }
+
+    50% {
+        top: 100%;
+    }
+}
+
+.scan h3 {
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: #00FFFF;
+    filter: drop-shadow(0 0 20px #00FFFF) drop-shadow(0 0 60px #00FFFF);
+    animation: animate_line 4s ease-in-out infinite;
+    animation: animate_text 0.5s steps(1) infinite;
+}
+
+@keyframes animate_text {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.start {
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    padding: 25px 30px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title h1 {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.title h4 {
+    margin-bottom: 100px;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cap1 {
+    padding: 10px 84px;
+}
+
+.conCap {
+    padding: 10px 50px;
+}
+
+.cap1,
+.conCap {
+    color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+    background: rgb(41, 41, 41);
+}
+
+.cap1:hover,
+.conCap:hover {
+    color: black;
+    font-weight: bolder;
+    background: white;
+}
+
+.continue {
+    display: none;
+    text-align: center;
+}
+
+.chapterKey {
+    color: white;
+}
+
+#startText {
+    display: none;
+}
+
+input {
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    padding-left: 6px;
+}
+
+.prev button {
+    margin-top: 10px;
+    font-size: 30px;
+    border: none;
+    background: none;
+    color: white;
+}
+
+.text {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.text .synopsis {
+    color: white;
+}
+
+.typed-cursor {
+    color: white;
+}
+
+#warning {
+    display: none;
+}
+
+.warning {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
